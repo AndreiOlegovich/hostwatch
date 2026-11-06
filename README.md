@@ -120,3 +120,7 @@ The project is laid out as follows:
 | `ui/` | React UI, built with Vite |
 | `tests/` | pytest tests for the API and the host helper |
 | `Dockerfile` | Two stages: builds the UI with Node, then runs the API on Python 3.12 |
+
+## License
+
+[MIT](LICENSE)
