@@ -1,0 +1,30 @@
+[project]
+name = "hostwatch"
+version = "0.1.0"
+description = "Read-only local dashboard for this machine: Claude Code and OpenCode sessions"
+requires-python = ">=3.12"
+dependencies = [
+  "fastapi>=0.115,<1.0",
+  "uvicorn>=0.30,<1.0",
+]
+
+[dependency-groups]
+dev = [
+  "httpx2>=1.0",
+  "pytest>=8,<9",
+  "ruff>=0.14",
+]
+
+[tool.uv]
+package = false
+
+[tool.ruff]
+target-version = "py312"
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B", "C4", "SIM"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
